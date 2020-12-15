@@ -1,6 +1,30 @@
 html {
-    background:url(original.jpg);
+    background: url(original.jpg);
     background-size: cover;
     overflow: hidden;
     background-attachment: scroll;
+}
+
+header {
+    height: 80px;
+    background-color: rgba(55, 71, 84, 0.9);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: white;
+    align-items: center;
+}
+
+.logo {
+    padding: 4px;
+}
+
+.logo-icon {
+    height: 50px;
+}
+
+.head-text {
+    font-size: 25px;
+    color: #65c7d0;
+    padding: 4px;
 }
