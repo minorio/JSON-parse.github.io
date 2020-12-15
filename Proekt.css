@@ -34,7 +34,10 @@ header {
     color: #ffffff;
     padding: 4px;
 }
-
+.textarea-box textarea{
+    width:100%;
+    height: 80px;
+}
 .center-box {
     position: fixed;
     padding: 5px;
