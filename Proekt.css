@@ -1,4 +1,4 @@
-html {
+body {
     background: url(original.jpg) no-repeat;
     background-size: cover;
     overflow: hidden;
@@ -13,7 +13,6 @@ header {
     color: white;
     align-items: center;
 }
-
 .logo {
     padding: 4px;
 }
@@ -27,6 +26,7 @@ header {
     color: #65c7d0;
     padding: 4px;
 }
+
 .center-box {
     position: fixed;
     padding: 5px;
@@ -35,8 +35,9 @@ header {
     width: 500px;
     height: auto;
     margin: -150px 0 0 -250px;
-    background: rgba(255, 255, 255, 0.562);
     overflow: hidden;
+    background-color: rgba(55, 71, 84, 0.9);
+    color: white;
 }
 
 .center-box div {
@@ -56,4 +57,8 @@ progress {
     background-image: linear-gradient(to right, #e4e4e4 1px, transparent 1px),
         linear-gradient(rgba(0, 0, 0, .2) 1px, rgba(255, 255, 255, .4) 1px, rgba(0, 0, 0, .2));
     background-size: 10% 100%, 100% 100%;
+}
+footer{
+    margin-bottom: 0px;
+    background-color: black;
 }
