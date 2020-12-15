@@ -1,0 +1,6 @@
+html {
+    background:url(original.jpg);
+    background-size: cover;
+    overflow: hidden;
+    background-attachment: scroll;
+}
