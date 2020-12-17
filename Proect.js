@@ -10,5 +10,7 @@ btn.onclick = function () {
         if (e instanceof SyntaxError) {
             alert("Неправильный формат")
         }
+    } finally {
+        alert("Всё хорошо");
     }
 };
