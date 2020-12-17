@@ -1,7 +1,7 @@
 {
     "CyberPunk": [
         {
-            "name": "Silver Hand",
+            "name": "SILVER HAND",
             "material": "silver",
             "use": "limb replacement",
             "lifeTime": 8,
@@ -14,7 +14,7 @@
             }
         },
         {
-            "name": "Silver Hand",
+            "name": "IMPROVED VISION",
             "material": "hydrogel polymers",
             "use": "eyes improvement",
             "lifeTime": 10,
@@ -28,7 +28,7 @@
             }
         },
         {
-            "name": "Silver Hand",
+            "name": "HAND CAT HOOK",
             "material": "stainless steel",
             "use": "parkour",
             "lifeTime": 3,
@@ -40,7 +40,7 @@
             }
         },
         {
-            "name": "Silver Hand",
+            "name": "GRABSTIKHEL",
             "material": "titan",
             "use": "kill",
             "lifeTime": 1,
@@ -53,7 +53,7 @@
             }
         },
         {
-            "name": "Silver Hand",
+            "name": "STRENGTHENED SPINE",
             "material": "carbon",
             "use": "reinforcement",
             "lifeTime": 15,
