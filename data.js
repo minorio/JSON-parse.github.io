@@ -1,4 +1,5 @@
-SILVER-HAND{
+const Body_modifications = {
+    SILVER_HAND:{
     material:'silver',
     use:'limb replacement',
     lifeTime:8,
@@ -9,8 +10,8 @@ SILVER-HAND{
       knife:49,
       autoRepair:699,
     }
-  }
-  IMPROVED-VISION{
+  },
+    IMPROVED_VISION:{
     material:'hydrogel polymers',
     use:'eyes improvement',
     lifeTime:10,
@@ -22,8 +23,8 @@ SILVER-HAND{
       nightVision:899,
       AI:599,
     }  
-  }
-  HAND-CAT-HOOK{
+  },
+    HAND_CAT_HOOK:{
     material:'stainless steel',
     use:'parkour',
     lifeTime:3,
@@ -33,8 +34,8 @@ SILVER-HAND{
       capture:299,
       AI:399,
     }  
-  }
-  GRABSTIKHEL{
+  },
+    GRABSTIKHEL:{
     material:'titan',
     use:'kill',
     lifeTime:1,
@@ -45,12 +46,12 @@ SILVER-HAND{
       poisonous:499,
       lockpicking:399,
     }  
-  }
-  STRENGTHENED-SPINE{
+  },
+    STRENGTHENED_SPINE:{
     material:'carbon',
     use:'reinforcement',
     lifeTime:15,
     price:30999,
-    attachments:'_';
+    attachments:'_',
   }
-  
+}
