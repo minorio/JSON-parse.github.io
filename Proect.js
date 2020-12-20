@@ -11,10 +11,11 @@ btn.onclick = function () {
                 let tr = document.createElement('tr');
 
                 let td1 = document.createElement('td');
+                td1.className = ('col');
                 td1.innerText = myjson.CyberPunk[i].name;
                 tr.appendChild(td1);
                 let td2 = document.createElement('td');
-                td2.innerText =  elem;
+                td2.innerText =   myjson.CyberPunk[i];
                 td2.innerText = myjson.CyberPunk[i].material;
                 tr.appendChild(td2);
 
@@ -23,11 +24,11 @@ btn.onclick = function () {
                 tr.appendChild(td3);
 
                 let td4 = document.createElement('td');
-                td4.innerText = myjson.CyberPunk[i].lifeTime;
+                td4.innerText = myjson.CyberPunk[i].lifeTime + ' years';
                 tr.appendChild(td4);
 
                 let td5 = document.createElement('td');
-                td5.innerText = myjson.CyberPunk[i].price;
+                td5.innerText = myjson.CyberPunk[i].price + ' $';
                 tr.appendChild(td5);
 
                 table.appendChild(tr);

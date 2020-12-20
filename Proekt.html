@@ -1,58 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./Proekt.css">
-</head>
+    <link rel="stylesheet" href="./Proekt.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="logo">
-            <img class="logo-icon" src="./puzzle.png" alt="">
-        </div>
-        <div class="head-text">
-            <p>Service JSON</p>
-        </div>
+      <div class="logo">
+        <img class="logo-icon" src="./puzzle.png" alt="" />
+      </div>
+      <div class="head-text">
+        <p>Service JSON</p>
+      </div>
     </header>
     <main>
-        <div class='center-box'>
-            <div class='description-box'>
-                <span>
-                    Сервис предназначен для преобразования JSON файла в удобную, для чтения таблицу.
-                    JSON может быть настолько сложным, насколько это необходимо,
-                    объекты и массивы могут включать другие объекты и массивы.
-                </span><br />
-                <span>Пожалуйста, прикрепите свой JSON файл ниже:</span>
-            </div>
-            <div class='textarea-box'>
-                <textarea></textarea>
-            </div>
-            <div class='table-box'>
-                <table>
-                </table>
-            </div>
-            <div class='transformButton-box'>
-                <button>Трансформировать</button>
-            </div>
+      <div class="center-box">
+        <div class="description-box">
+          <span>
+            Сервис предназначен для преобразования JSON файла в удобную, для
+            чтения таблицу. JSON может быть настолько сложным, насколько это
+            необходимо, объекты и массивы могут включать другие объекты и
+            массивы. </span
+          ><br />
+          <span>Пожалуйста, прикрепите свой JSON файл ниже:</span>
         </div>
+        <div class="textarea-box">
+          <textarea>{
+            "CyberPunk": [
+                {
+                    "name": "SILVER HAND",
+                    "material": "silver",
+                    "use": "limb replacement",
+                    "lifeTime": 8,
+                    "price": 2999,
+                    "attachments": {
+                        "design": 399,
+                        "lighter": 35,
+                        "knife": 49,
+                        "autoRepair": 699
+                    }
+                },
+                {
+                    "name": "IMPROVED VISION",
+                    "material": "hydrogel polymers",
+                    "use": "eyes improvement",
+                    "lifeTime": 10,
+                    "price": 2999,
+                    "attachments": {
+                        "design": 99,
+                        "infraredVision": 499,
+                        "personalityScan": 3999,
+                        "nightVision": 899,
+                        "AI": 599
+                    }
+                },
+                {
+                    "name": "HAND CAT HOOK",
+                    "material": "stainless steel",
+                    "use": "parkour",
+                    "lifeTime": 3,
+                    "price": 999,
+                    "attachments": {
+                        "extraLength": 149,
+                        "capture": 299,
+                        "AI": 399
+                    }
+                },
+                {
+                    "name": "GRABSTIKHEL",
+                    "material": "titan",
+                    "use": "kill",
+                    "lifeTime": 1,
+                    "price": 1499,
+                    "attachments": {
+                        "design": 229,
+                        "extraLength": 149,
+                        "poisonous": 499,
+                        "lockpicking": 399
+                    }
+                },
+                {
+                    "name": "STRENGTHENED SPINE",
+                    "material": "carbon",
+                    "use": "reinforcement",
+                    "lifeTime": 15,
+                    "price": 30999,
+                    "attachments": "_"
+                }
+            ]
+        } </textarea>
+        </div>
+
+        <div class="transformButton-box">
+          <button>Трансформировать</button>
+        </div>
+      </div>
+      <div class="table-box">
+        <table></table>
+      </div>
     </main>
     <footer>
-        <div class='logo-block'>
-            <div class="logo">
-                <img class="flogo-icon" src="./puzzle.png" alt="">
-            </div>
-            <div class="fhead-text">
-                <p>Service JSON</p>
-            </div>
+      <div class="logo-block">
+        <div class="logo">
+          <img class="flogo-icon" src="./puzzle.png" alt="" />
         </div>
-        <div class="copyright">
-            <p>Copyright © 2020 BaDev  All rights reserved</p>
+        <div class="fhead-text">
+          <p>Service JSON</p>
         </div>
+      </div>
+      <div class="copyright">
+        <p>Copyright © 2020 BaDev All rights reserved</p>
+      </div>
     </footer>
     <script src="./Proect.js"></script>
-</body>
-
+  </body>
 </html>
