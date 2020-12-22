@@ -5,10 +5,19 @@ btn.onclick = function () {
         if (textarea.value !== "") {
             const myjson = JSON.parse(textarea.value);
             let table = document.querySelector('table');
+            for(let key in myjson.CyberPunk){
+                console.log(CyberPunk.key)
+            }
             for (i in myjson.CyberPunk) {
                 
 
                 let tr = document.createElement('tr');
+                
+                let td = document.createElement('td');
+                td.className = ('td');
+                td.innerText = myjson.CyberPunk[i];
+                tr.appendChild(td);
+
 
                 let td1 = document.createElement('td');
                 td1.className = ('col');
