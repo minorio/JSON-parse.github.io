@@ -1,53 +1,58 @@
 let btn = document.querySelector('button');
 let textarea = document.querySelector('textarea');
+let centerBox = document.querySelector('.center-box');
+
+function getTableColumnName(data, row) {
+    console.log(data, row)
+    return data.reduce((acc, item) => {
+        let th = document.createElement('th');
+        th.className = ('col');
+        th.innerText = item;
+
+        acc.appendChild(th);
+
+        return acc;
+    }, row);
+}
+
+function getTableRows(data, row) {
+    console.log(data, row)
+    return Object.keys(data).reduce((acc, item) => {
+        let td = document.createElement('td');
+        td.className = ('col');
+        td.innerText = data[item];
+
+        acc.appendChild(td);
+
+        return acc;
+    }, row);
+}
+
 btn.onclick = function () {
-    try {
-        if (textarea.value !== "") {
-            const myjson = JSON.parse(textarea.value);
-            let table = document.querySelector('table');
-            for(let key in myjson.CyberPunk){
-                console.log(CyberPunk.key)
-            }
-            for (i in myjson.CyberPunk) {
-                
+    centerBox.classList.add('hide-center-box');
 
-                let tr = document.createElement('tr');
-                
-                let td = document.createElement('td');
-                td.className = ('td');
-                td.innerText = myjson.CyberPunk[i];
-                tr.appendChild(td);
+    if (textarea.value !== "") {
+        const myjson = JSON.parse(textarea.value);
 
+        let table = document.querySelector('table');
+        const headTr = document.createElement('tr');
 
-                let td1 = document.createElement('td');
-                td1.className = ('col');
-                td1.innerText = myjson.CyberPunk[i].name;
-                tr.appendChild(td1);
-                let td2 = document.createElement('td');
-                td2.innerText =   myjson.CyberPunk[i];
-                td2.innerText = myjson.CyberPunk[i].material;
-                tr.appendChild(td2);
+        const nameColumns = Object.keys(myjson.CyberPunk[0]);
+        const tableHeadColumn = getTableColumnName(nameColumns, headTr);
+        
+        table.appendChild(tableHeadColumn);
 
-                let td3 = document.createElement('td');
-                td3.innerText = myjson.CyberPunk[i].use;
-                tr.appendChild(td3);
+        for (i in myjson.CyberPunk) {
+            let tr = document.createElement('tr');
+            
+            const newTr = getTableRows(myjson.CyberPunk[i], tr);
 
-                let td4 = document.createElement('td');
-                td4.innerText = myjson.CyberPunk[i].lifeTime + ' years';
-                tr.appendChild(td4);
-
-                let td5 = document.createElement('td');
-                td5.innerText = myjson.CyberPunk[i].price + ' $';
-                tr.appendChild(td5);
-
-                table.appendChild(tr);
-            }
-        } else alert("Вы не добавили JSON файл!");
-    } catch (e) {
-        if (e instanceof SyntaxError) {
-            alert("Неправильный формат")
+            table.appendChild(newTr);
         }
-    } finally {
-        alert("Всё хорошо");
+        console.log(table);
+    } else {
+        alert("Вы не добавили JSON файл!");
+        centerBox.classList.remove('hide-center-box');
     }
+
 };
