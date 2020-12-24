@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
   <link rel="stylesheet" href="./Proekt.css" />
+  <script src="./getTableParts.js" defer></script>
+  <script src="./Proect.js" defer></script>
 </head>
 
 <body>
@@ -28,81 +30,7 @@
         <span>Пожалуйста, прикрепите свой JSON файл ниже:</span>
       </div>
       <div class="textarea-box">
-        <textarea>{
-            "CyberPunk": [{
-                    "name": "SILVER HAND",
-                    "material": "silver",
-                    "use": "limb replacement",
-                    "lifeTime": 8,
-                    "price": 2999,
-                    "attachments": {
-                        "id": 1,
-                        "data": {
-                            "design": 399,
-                            "lighter": 35,
-                            "knife": 49,
-                            "autoRepair": 699
-                        }
-                    }
-                },
-                {
-                    "name": "IMPROVED VISION",
-                    "material": "hydrogel polymers",
-                    "use": "eyes improvement",
-                    "lifeTime": 10,
-                    "price": 2999,
-                    "attachments": {
-                        "id": 2,
-                        "data": {
-                            "design": 99,
-                            "infraredVision": 499,
-                            "personalityScan": 3999,
-                            "nightVision": 899,
-                            "AI": 599
-                        }
-                    }
-                },
-                {
-                    "name": "HAND CAT HOOK",
-                    "material": "stainless steel",
-                    "use": "parkour",
-                    "lifeTime": 3,
-                    "price": 999,
-                    "attachments": {
-                        "id": 3,
-                        "data": {
-                            "extraLength": 149,
-                            "capture": 299,
-                            "AI": 399
-                        }
-                    }
-                },
-                {
-                    "name": "GRABSTIKHEL",
-                    "material": "titan",
-                    "use": "kill",
-                    "lifeTime": 1,
-                    "price": 1499,
-                    "attachments": {
-                        "id": 4,
-                        "data": {
-                            "design": 229,
-                            "extraLength": 149,
-                            "poisonous": 499,
-                            "lockpicking": 399
-                        }
-                    }
-                },
-                {
-                    "name": "STRENGTHENED SPINE",
-                    "material": "carbon",
-                    "use": "reinforcement",
-                    "lifeTime": 15,
-                    "price": 30999,
-                    "attachments": "_"
-                }
-            ]
-        } </textarea>
+        <textarea id='textplaceholder'placeholder="Вставьте сюда свои данные, JSON"></textarea>
       </div>
 
       <div class="transformButton-box">
@@ -140,7 +68,5 @@
       <p>Copyright © 2020 BaDev All rights reserved</p>
     </div>
   </footer>
-  <script src="./Proect.js"></script>
 </body>
-
 </html>
