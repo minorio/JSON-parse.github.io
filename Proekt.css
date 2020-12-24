@@ -13,6 +13,7 @@ body {
 }
 
 header {
+    z-index: 1;
     height: 80px;
     background-color: rgba(55, 71, 84, 0.9);
     display: flex;
@@ -43,6 +44,7 @@ header {
 }
 
 .center-box {
+    z-index: 1;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -108,10 +110,11 @@ header {
 .description-box span {
     font-size: 18px;
     padding: 8px;
-    color:  #65c7d0;
+    color: #65c7d0;
 }
 
 footer {
+    z-index: 1;
     background-color: rgba(55, 71, 84, 0.9);
     position: absolute;
     bottom: 0;
@@ -175,18 +178,52 @@ table tr :nth-child(odd) {
 table tr :nth-child(even) {
     background-color: rgb(46, 74, 98, 0.7);
 }
-.thname{
-font-size: 22px;
-font-weight: normal;
-text-transform: uppercase;
-padding: 10px;
-color:#65c7d0 ;
-text-shadow: 2px 2px 3px  black;
+
+.thname {
+    font-size: 22px;
+    font-weight: normal;
+    text-transform: uppercase;
+    padding: 10px;
+    color: #65c7d0;
+    text-shadow: 2px 2px 3px black;
 }
+
 .hide-center-box {
     visibility: hidden;
 }
 
+.modal-box {
+    visibility: hidden;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: rgb(0, 0, 0, 0.5);
+    height: calc(100vh - 80px);
+    width: 100%;
+}
+
+.modal-visible{
+    visibility: visible;
+}
+
+.modal {
+    height: 60vh;
+    width: 80vw;
+    background-color: rgb(255, 255, 255);
+}
+
+.modal-header {
+    height: 60px;
+    width: 100%;
+    background-color: chocolate;
+}
+
+.modal-content {
+    width: 100%;
+    height: calc(100% - 60px);
+}
 
 
 

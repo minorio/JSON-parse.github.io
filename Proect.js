@@ -1,67 +1,95 @@
 let btn = document.querySelector("button");
 let textarea = document.querySelector("textarea");
 let centerBox = document.querySelector(".center-box");
+let table = document.querySelector("table");
+const myjson = JSON.parse(textarea.value);
+const modal = document.querySelector('.modal-box');
+const closeButton = document.querySelector('.close-button');
+const modalBox = document.querySelector('.modal-box');
+const modalTable = document.querySelector('.modal-content table');
 
 function getTableColumnName(data, row) {
-  console.log(data, row);
-  return data.reduce((acc, item) => {
-    let th = document.createElement("th");
-    th.className = "thname";
-    th.innerText = item;
+    console.log(data, row);
+    return data.reduce((acc, item) => {
+        let th = document.createElement("th");
+        th.className = "thname";
+        th.innerText = item;
 
-    acc.appendChild(th);
+        acc.appendChild(th);
 
-    return acc;
-  }, row);
+        return acc;
+    }, row);
 }
 
-function getTableRows(data, row, i) {
-  console.log(data, row);
-  return Object.keys(data).reduce((acc, item) => {
-    let td = document.createElement("td");
-    td.className = "col";
+function getTableRows(data, row) {
+    console.log(data, row);
+    return Object.keys(data).reduce((acc, item) => {
+        let td = document.createElement("td");
+        td.className = "col";
 
-    if (typeof data[item] !== "object") {
-      td.innerText = data[item];
-    } else {
-      const buttonView = document.createElement("button");
-      buttonView.innerText = 'view';
-      buttonView.id = 'view' + i;
+        if (typeof data[item].data !== "object") {
+            td.innerText = data[item];
+        } else {
+            const buttonView = document.createElement("button");
+            buttonView.innerText = 'view';
+            buttonView.id = data[item].id;
 
-      buttonView.className = 'view';
+            buttonView.className = 'view';
 
-      td.appendChild(buttonView);  
+            td.appendChild(buttonView);
+        }
+
+        acc.appendChild(td);
+
+        return acc;
+    }, row);
+}
+
+function createTable(modalData){
+console.log(modalData);
+}
+
+table.onclick = function (event) {
+
+    if (event.target.className === 'view') {
+        modalTable.innerHTML = '';
+        const targetId = event.target.id;
+        console.log(targetId);
+        const modalData = myjson.CyberPunk.find(item => item.attachments.id == targetId).attachments.data;
+
+        createTable(modalData);
     }
-
-    acc.appendChild(td);
-
-    return acc;
-  }, row);
+    modal.classList.add('modal-visible')
+}
+modalBox.onclick = function () {
+    modal.classList.remove('modal-visible');
+}
+closeButton.onclick = function () {
+    modal.classList.remove('modal-visible');
 }
 
 btn.onclick = function () {
-  centerBox.classList.add("hide-center-box");
+    centerBox.classList.add("hide-center-box");
 
-  if (textarea.value !== "") {
-    const myjson = JSON.parse(textarea.value);
+    if (textarea.value !== "") {
 
-    let table = document.querySelector("table");
-    const headTr = document.createElement("tr");
 
-    const nameColumns = Object.keys(myjson.CyberPunk[0]);
-    const tableHeadColumn = getTableColumnName(nameColumns, headTr);
+        const headTr = document.createElement("tr");
 
-    table.appendChild(tableHeadColumn);
+        const nameColumns = Object.keys(myjson.CyberPunk[0]);
+        const tableHeadColumn = getTableColumnName(nameColumns, headTr);
 
-    for (i in myjson.CyberPunk) {
-      let tr = document.createElement("tr");
+        table.appendChild(tableHeadColumn);
 
-      const newTr = getTableRows(myjson.CyberPunk[i], tr, i);
+        for (i in myjson.CyberPunk) {
+            let tr = document.createElement("tr");
 
-      table.appendChild(newTr);
+            const newTr = getTableRows(myjson.CyberPunk[i], tr, i);
+
+            table.appendChild(newTr);
+        }
+    } else {
+        alert("Вы не добавили JSON файл!");
+        centerBox.classList.remove("hide-center-box");
     }
-  } else {
-    alert("Вы не добавили JSON файл!");
-    centerBox.classList.remove("hide-center-box");
-  }
 };

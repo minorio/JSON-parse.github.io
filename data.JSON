@@ -1,16 +1,18 @@
 {
-    "CyberPunk": [
-        {
+    "CyberPunk": [{
             "name": "SILVER HAND",
             "material": "silver",
             "use": "limb replacement",
             "lifeTime": 8,
             "price": 2999,
             "attachments": {
-                "design": 399,
-                "lighter": 35,
-                "knife": 49,
-                "autoRepair": 699
+                "id": 1,
+                "data": {
+                    "design": 399,
+                    "lighter": 35,
+                    "knife": 49,
+                    "autoRepair": 699
+                }
             }
         },
         {
@@ -20,11 +22,14 @@
             "lifeTime": 10,
             "price": 2999,
             "attachments": {
-                "design": 99,
-                "infraredVision": 499,
-                "personalityScan": 3999,
-                "nightVision": 899,
-                "AI": 599
+                "id": 2,
+                "data": {
+                    "design": 99,
+                    "infraredVision": 499,
+                    "personalityScan": 3999,
+                    "nightVision": 899,
+                    "AI": 599
+                }
             }
         },
         {
@@ -34,9 +39,12 @@
             "lifeTime": 3,
             "price": 999,
             "attachments": {
-                "extraLength": 149,
-                "capture": 299,
-                "AI": 399
+                "id": 3,
+                "data": {
+                    "extraLength": 149,
+                    "capture": 299,
+                    "AI": 399
+                }
             }
         },
         {
@@ -46,10 +54,13 @@
             "lifeTime": 1,
             "price": 1499,
             "attachments": {
-                "design": 229,
-                "extraLength": 149,
-                "poisonous": 499,
-                "lockpicking": 399
+                "id": 4,
+                "data": {
+                    "design": 229,
+                    "extraLength": 149,
+                    "poisonous": 499,
+                    "lockpicking": 399
+                }
             }
         },
         {
