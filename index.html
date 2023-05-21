@@ -1,72 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./Proekt.css" />
+		<script type="text/javascript" src="data.json"></script>
+		<script src="./getTableParts.js" defer></script>
+		<script src="./Proect.js" defer></script>
+	</head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link rel="stylesheet" href="./Proekt.css" />
-  <script src="./getTableParts.js" defer></script>
-  <script src="./Proect.js" defer></script>
-</head>
+	<body>
+		<header>
+			<div class="logo">
+				<img class="logo-icon" src="./puzzle.png" alt="" />
+			</div>
+			<div class="head-text">
+				<a href="index.html">Service JSON</a>
+			</div>
+		</header>
+		<main>
+			<div class="main__inner">
+				<a href="index.html"
+					><svg
+						version="1.1"
+						id="Capa_1"
+						xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink"
+						x="0px"
+						y="0px"
+						viewBox="0 0 477.862 477.862"
+						style="enable-background: new 0 0 477.862 477.862"
+						xml:space="preserve"
+					>
+						<g>
+							<g>
+								<path
+									d="M187.722,102.856V17.062C187.719,7.636,180.076-0.003,170.65,0c-4.834,0.001-9.44,2.053-12.676,5.644L4.375,176.311
+           c-5.617,6.256-5.842,15.67-0.529,22.187l153.6,187.733c5.968,7.295,16.72,8.371,24.016,2.403c3.952-3.233,6.249-8.066,6.26-13.172
+           v-85.043c134.827,4.386,218.965,62.02,256.888,175.787c2.326,6.96,8.841,11.653,16.179,11.656c0.92,0.003,1.84-0.072,2.748-0.222
+           c8.256-1.347,14.319-8.479,14.319-16.845C477.855,259.818,356.87,112.174,187.722,102.856z M170.655,255.995
+           c-9.426,0-17.067,7.641-17.067,17.067v54.613L39.532,188.257l114.057-126.72v57.924c0,9.426,7.641,17.067,17.067,17.067
+           c134.144,0,234.53,92.826,264.124,234.462C379.841,294.6,291.385,255.995,170.655,255.995z"
+								/>
+							</g>
+						</g>
+						<g></g>
+						<g></g>
+						<g></g>
+						<g></g>
+						<g></g>
+						<g></g>
+						<g></g>
+						<g></g>
+						<g></g>
+						<g></g>
+						<g></g>
+						<g></g>
+						<g></g>
+						<g></g>
+						<g></g></svg
+				></a>
+				<div class="center-box">
+					<div class="description-box">
+						<span>
+							Конвертер JSON поможет вам конвертировать JSON-код в удобную, для
+							чтения таблицу.</span
+						><br />
+						<span>Пожалуйста, вводите свои JSON данные ниже:</span>
+					</div>
+					<div class="textarea-box">
+						<textarea
+							id="textplaceholder"
+							placeholder="Вставьте сюда свои данные, JSON"
+						>
+            {
+              "Users": [
+              {
+                "id": 1,
+                "first_name": "Pincas",
+                "last_name": "Magnay",
+                "email": "pmagnay0@exblog.jp",
+                "gender": "Male",
+                "ip_address": "146.115.83.219"
+              }, {
+                "id": 2,
+                "first_name": "Ailee",
+                "last_name": "Goodluck",
+                "email": "agoodluck1@berkeley.edu",
+                "gender": "Female",
+                "ip_address": "148.48.17.112"
+              }, {
+                "id": 3,
+                "first_name": "Reider",
+                "last_name": "Ciementini",
+                "email": "rciementini2@japanpost.jp",
+                "gender": "Male",
+                "ip_address": "244.210.175.50"
+              }, {
+                "id": 4,
+                "first_name": "Valentina",
+                "last_name": "Emson",
+                "email": "vemson3@kickstarter.com",
+                "gender": "Female",
+                "ip_address": "58.121.83.202"
+              }, {
+                "id": 5,
+                "first_name": "Gifford",
+                "last_name": "Hewins",
+                "email": "ghewins4@msn.com",
+                "gender": "Male",
+                "ip_address": "83.249.212.173"
+              }, {
+                "id": 6,
+                "first_name": "Clareta",
+                "last_name": "MacTrustam",
+                "email": "cmactrustam5@biblegateway.com",
+                "gender": "Female",
+                "ip_address": "133.15.197.66"
+              }, {
+                "id": 7,
+                "first_name": "Lethia",
+                "last_name": "Nusche",
+                "email": "lnusche6@purevolume.com",
+                "gender": "Female",
+                "ip_address": "83.106.54.233"
+              }, {
+                "id": 8,
+                "first_name": "Mabelle",
+                "last_name": "Gilks",
+                "email": "mgilks7@nsw.gov.au",
+                "gender": "Female",
+                "ip_address": "24.0.17.229"
+              }, {
+                "id": 9,
+                "first_name": "Gabrielle",
+                "last_name": "Rotge",
+                "email": "grotge8@redcross.org",
+                "gender": "Female",
+                "ip_address": "39.6.218.110"
+              }, {
+                "id": 10,
+                "first_name": "Loy",
+                "last_name": "Voss",
+                "email": "lvoss9@webeden.co.uk",
+                "gender": "Male",
+                "ip_address": "24.104.134.107"
+              }, {
+                "id": 11,
+                "first_name": "Burty",
+                "last_name": "Tie",
+                "email": "btiea@hc360.com",
+                "gender": "Male",
+                "ip_address": "252.137.110.192"
+              }, {
+                "id": 12,
+                "first_name": "Lucretia",
+                "last_name": "Siege",
+                "email": "lsiegeb@google.nl",
+                "gender": "Genderqueer",
+                "ip_address": "67.240.77.188"
+              }, {
+                "id": 13,
+                "first_name": "Denver",
+                "last_name": "Lytlle",
+                "email": "dlytllec@wordpress.com",
+                "gender": "Male",
+                "ip_address": "163.74.173.127"
+              }, {
+                "id": 14,
+                "first_name": "Curtis",
+                "last_name": "Roach",
+                "email": "croachd@hubpages.com",
+                "gender": "Male",
+                "ip_address": "94.229.111.7"
+              }
+              ]
+            }</textarea
+						>
+					</div>
 
-<body>
-  <header>
-    <div class="logo">
-      <img class="logo-icon" src="./puzzle.png" alt="" />
-    </div>
-    <div class="head-text">
-      <p>Service JSON</p>
-    </div>
-  </header>
-  <main>
-    <div class="center-box">
-      <div class="description-box">
-        <span>
-          Сервис предназначен для преобразования JSON файла в удобную, для
-          чтения таблицу. JSON может быть настолько сложным, насколько это
-          необходимо, объекты и массивы могут включать другие объекты и
-          массивы. </span><br />
-        <span>Пожалуйста, прикрепите свой JSON файл ниже:</span>
-      </div>
-      <div class="textarea-box">
-        <textarea id='textplaceholder'placeholder="Вставьте сюда свои данные, JSON"></textarea>
-      </div>
+					<div class="transformButton-box">
+						<button>Трансформировать</button>
+					</div>
+				</div>
 
-      <div class="transformButton-box">
-        <button>Трансформировать</button>
-      </div>
-    </div>
-
-    <div class="table-box">
-      <table class="cyber-table"></table>
-    </div>
-    <div class='modal-box'>
-      <div class='modal' onclick = event.stopPropagation()>
-        <div class='modal-header'>
-          <p>ATTACHMENTS</p>
-          <button class = 'close-button'>
-            <img src="./krest.png" alt="">
-          </button>
-        </div>
-        <div class='modal-content'>
-          <table  class='modal-table'></table>
-        </div>
-      </div>
-    </div>
-  </main>
-  <footer>
-    <div class="logo-block">
-      <div class="logo">
-        <img class="flogo-icon" src="./puzzle.png" alt="" />
-      </div>
-      <div class="fhead-text">
-        <p>Service JSON</p>
-      </div>
-    </div>
-    <div class="copyright">
-      <p>Copyright © 2020 BaDev All rights reserved</p>
-    </div>
-  </footer>
-</body>
+				<div class="table-box">
+					<table class="cyber-table"></table>
+				</div>
+				<div class="modal-box">
+					<div class="modal" onclick="event.stopPropagation()">
+						<div class="modal-header">
+							<p>ATTACHMENTS</p>
+							<button class="close-button">
+								<img src="./krest.png" alt="" />
+							</button>
+						</div>
+						<div class="modal-content">
+							<table class="modal-table"></table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer>
+			<div class="logo-block">
+				<div class="logo">
+					<img class="flogo-icon" src="./puzzle.png" alt="" />
+				</div>
+				<div class="fhead-text">
+					<p>Service JSON</p>
+				</div>
+			</div>
+			<div class="copyright">
+				<p>Copyright © 2020 BaDev All rights reserved</p>
+			</div>
+		</footer>
+	</body>
 </html>
